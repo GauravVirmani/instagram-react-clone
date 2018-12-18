@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import { Icon } from "native-base";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
@@ -51,7 +51,20 @@ const AppTabNavigator = createBottomTabNavigator(
   },
   {
     animationEnabled: true,
-    swipeEnabled: true
+    swipeEnabled: true,
+    tabBarOptions: {
+      style: {
+        ...Platform.select({
+          android: {
+            backgroundColor: "white"
+          }
+        })
+      },
+      activeTintColor: "#000",
+      inactiveTintColor: "#d1cece",
+      showLabel: false,
+      showIcon: true
+    }
   }
 );
 
