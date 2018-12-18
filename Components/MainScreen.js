@@ -31,23 +31,29 @@ class MainScreen extends Component {
   }
 }
 
-const AppTabNavigator = createBottomTabNavigator({
-  Home: {
-    screen: HomeTab
+const AppTabNavigator = createBottomTabNavigator(
+  {
+    Home: {
+      screen: HomeTab
+    },
+    Search: {
+      screen: SearchTab
+    },
+    AddMedia: {
+      screen: AddMediaTab
+    },
+    Likes: {
+      screen: LikesTab
+    },
+    Profile: {
+      screen: ProfileTab
+    }
   },
-  Search: {
-    screen: SearchTab
-  },
-  AddMedia: {
-    screen: AddMediaTab
-  },
-  Likes: {
-    screen: LikesTab
-  },
-  Profile: {
-    screen: ProfileTab
+  {
+    animationEnabled: true,
+    swipeEnabled: true
   }
-});
+);
 
 const AppTabContainer = createAppContainer(AppTabNavigator);
 
