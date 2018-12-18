@@ -21,8 +21,7 @@ class CardComponent extends Component {
             <Thumbnail
               small
               source={{
-                uri:
-                  "https://facebook.github.io/react-native/docs/assets/favicon.png"
+                uri: this.props.profilePic
               }}
             />
             <Body>
@@ -34,26 +33,26 @@ class CardComponent extends Component {
         <CardItem cardBody>
           <Image
             source={{
-              uri: "https://picsum.photos/458/354/?image=582"
+              uri: this.props.postPic
             }}
             style={{ height: 200, width: null, flex: 1 }}
           />
         </CardItem>
         <CardItem>
           <Left>
-            <Button style={{ backgroundColor: "white" }}>
+            <Button transparent>
               <Icon name="heart" style={{ color: "black" }} />
             </Button>
-            <Button style={{ backgroundColor: "white" }}>
+            <Button transparent>
               <Icon name="ios-chatbubbles" style={{ color: "black" }} />
             </Button>
-            <Button style={{ backgroundColor: "white" }}>
+            <Button transparent>
               <Icon name="ios-send" style={{ color: "black" }} />
             </Button>
           </Left>
         </CardItem>
         <CardItem style={{ height: 25 }}>
-          <Text>101 likes</Text>
+          <Text>{this.props.likes} likes</Text>
         </CardItem>
         <CardItem>
           <Text>

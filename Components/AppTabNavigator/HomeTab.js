@@ -13,7 +13,21 @@ class HomeTab extends Component {
     return (
       <Container>
         <Content>
-          <CardComponent />
+          <CardComponent
+            likes="101"
+            profilePic="https://picsum.photos/458/354/?image=122"
+            postPic="https://picsum.photos/458/354/?image=123"
+          />
+          <CardComponent
+            likes="123"
+            profilePic="https://picsum.photos/458/354/?image=125"
+            postPic="https://picsum.photos/458/354/?image=127"
+          />
+          <CardComponent
+            likes="243"
+            profilePic="https://picsum.photos/458/354/?image=189"
+            postPic="https://picsum.photos/458/354/?image=252"
+          />
         </Content>
       </Container>
     );
