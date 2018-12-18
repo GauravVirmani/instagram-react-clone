@@ -39,15 +39,15 @@ class CardComponent extends Component {
             style={{ height: 200, width: null, flex: 1 }}
           />
         </CardItem>
-        <CardItem style={{ height: 45 }}>
+        <CardItem>
           <Left>
-            <Button>
-              <Icon name="ios-heart" />
+            <Button style={{ backgroundColor: "white" }}>
+              <Icon name="heart" style={{ color: "black" }} />
             </Button>
-            <Button>
+            <Button style={{ backgroundColor: "white" }}>
               <Icon name="ios-chatbubbles" style={{ color: "black" }} />
             </Button>
-            <Button>
+            <Button style={{ backgroundColor: "white" }}>
               <Icon name="ios-send" style={{ color: "black" }} />
             </Button>
           </Left>
@@ -55,10 +55,12 @@ class CardComponent extends Component {
         <CardItem style={{ height: 25 }}>
           <Text>101 likes</Text>
         </CardItem>
-        <CardItem style={{ height: 25 }}>
+        <CardItem>
           <Text>
-            <Text style={{ fontWeight: "900" }}>Walter White </Text>I am the one
-            who knocks
+            <Text style={{ fontWeight: "900" }}>Walter White </Text>You clearly
+            don’t know who you’re talking to, so let me clue you in. I am not in
+            danger, Skyler. I am the danger! A guy opens his door and gets shot
+            and you think that of me? No. I am the one who knocks!
           </Text>
         </CardItem>
       </Card>
@@ -67,11 +69,3 @@ class CardComponent extends Component {
 }
 
 export default CardComponent;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
